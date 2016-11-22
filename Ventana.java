@@ -129,7 +129,7 @@ public class Ventana extends JFrame implements ActionListener{
 	 	return 0;
 	 }
 
-	 public void actionPerformed(ActionEvent e){
+	  public void actionPerformed(ActionEvent e){
 	 	String wall = e.getActionCommand();
 	 	boolean move = false;
 	 	int w;

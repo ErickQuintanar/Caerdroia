@@ -85,14 +85,21 @@ public class Combate{
 					// Lista de pociones
 					int pocionElegida = 0; //
 					try {
-						heroe.setVida(heroe.getVida()+heroe.getBolsa().getPocion(pocionElegida).getVida());
+      					heroe.setVida(heroe.getVida()+heroe.getBolsa().getPocion(pocionElegida).getVida());
+      					if(pocionElegida < 4){
+      						for(int i = pocionElegida; i<4; i++){
+      							heroe.getBolsa().setPocion(heroe.getBolsa().getPocion(i+1), i);
+      						}
+      					}
+      					heroe.getBolsa().setPocion(new Pocion(3), 4);
+      					heroe.getBolsa().setNumeroPociones(heroe.getBolsa().getNumeroPociones()-1);
 						if(pocionElegida < 4){
 							for(int i = pocionElegida; i<4; i++){
 								heroe.getBolsa().setPocion(heroe.getBolsa().getPocion(i+1), i);
 							}
+							heroe.getBolsa().setPocion(new Pocion(3), 4);
+							heroe.getBolsa().setNumeroPociones(heroe.getBolsa().getNumeroPociones()-1);
 						}
-						heroe.getBolsa().setPocion(new Pocion(3), 4);
-						heroe.getBolsa().setNumeroPociones(heroe.getBolsa().getNumeroPociones()-1);
 					} catch (NullPointerException e){
 						// No tienes pociones
 					}
