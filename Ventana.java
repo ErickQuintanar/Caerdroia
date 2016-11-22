@@ -226,6 +226,9 @@ public class Ventana extends JFrame implements ActionListener{
 	 			if(m.getCamara(x,y-1).getNivel()==m.getHeroe().getBolsa().getLlave().getNivel()){
 	 				JOptionPane.showMessageDialog(null, "Has utilizado tu llave");
 	 				//resetear llave y cambiar valor de ambas camaras a open-2
+	 				m.getHeroe().getBolsa().getLlave().setNivel(0);
+	 				m.getCamara(x,y).setUp(2);
+	 				m.getCamara(x,y-1).setDown(2);
 	 				return true;
 	 			}else{
 	 				return false;
@@ -233,7 +236,9 @@ public class Ventana extends JFrame implements ActionListener{
 	 		case "down":
 	 			if(m.getCamara(x,y+1).getNivel()==m.getHeroe().getBolsa().getLlave().getNivel()){
 	 				JOptionPane.showMessageDialog(null, "Has utilizado tu llave");
-	 				//resetear llave y cambiar valor de ambas camaras a open-2
+	 				m.getHeroe().getBolsa().getLlave().setNivel(0);
+	 				m.getCamara(x,y+1).setUp(2);
+	 				m.getCamara(x,y).setDown(2);
 	 				return true;
 	 			}else{
 	 				return false;
@@ -241,7 +246,9 @@ public class Ventana extends JFrame implements ActionListener{
 	 		case "left":
 	 			if(m.getCamara(x-1,y).getNivel()==m.getHeroe().getBolsa().getLlave().getNivel()){
 	 				JOptionPane.showMessageDialog(null, "Has utilizado tu llave");
-	 				//resetear llave y cambiar valor de ambas camaras a open-2
+	 				m.getHeroe().getBolsa().getLlave().setNivel(0);
+	 				m.getCamara(x,y).setLeft(2);
+	 				m.getCamara(x-1,y).setRight(2);
 	 				return true;
 	 			}else{
 	 				return false;
@@ -249,7 +256,9 @@ public class Ventana extends JFrame implements ActionListener{
 	 		case "right":
 	 			if(m.getCamara(x+1,y).getNivel()==m.getHeroe().getBolsa().getLlave().getNivel()){
 	 				JOptionPane.showMessageDialog(null, "Has utilizado tu llave");
-	 				//resetear llave y cambiar valor de ambas camaras a open-2
+	 				m.getHeroe().getBolsa().getLlave().setNivel(0);
+	 				m.getCamara(x+1,y).setLeft(2);
+	 				m.getCamara(x,y).setRight(2);
 	 				return true;
 	 			}else{
 	 				return false;

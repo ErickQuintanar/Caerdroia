@@ -120,7 +120,7 @@ public class Camara{
 		return up;
 	}
 
-	private void setUp(int up) {
+	public void setUp(int up) {
 		this.up = up;
 	}
 
@@ -128,7 +128,7 @@ public class Camara{
 		return down;
 	}
 
-	private void setDown(int down) {
+	public void setDown(int down) {
 		this.down = down;
 	}
 
@@ -136,7 +136,7 @@ public class Camara{
 		return left;
 	}
 
-	private void setLeft(int left) {
+	public void setLeft(int left) {
 		this.left = left;
 	}
 
@@ -144,7 +144,7 @@ public class Camara{
 		return right;
 	}
 
-	private void setRight(int right) {
+	public void setRight(int right) {
 		this.right = right;
 	}
 
